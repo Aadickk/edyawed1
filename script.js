@@ -86,4 +86,23 @@ form.addEventListener('submit', e => {
   .then(() => { window.location.reload(); })
   .catch(error => console.error('Error!', error.message))
 })
+const playButton = document.getElementById('playButton');
+    const audio = document.getElementById('audio');
 
+    playButton.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play().then(() => {
+                playButton.innerHTML = '&#10074;&#10074;'; // Символ паузы
+            }).catch(error => {
+                console.error('Ошибка воспроизведения:', error);
+                playButton.innerHTML = '&#9658;'; // Возвращаем символ Play
+            });
+        } else {
+            audio.pause();
+            playButton.innerHTML = '&#9658;'; // Символ Play
+        }
+    });
+
+    audio.addEventListener('ended', () => {
+        playButton.innerHTML = '&#9658;'; // Возвращаем символ Play по окончании музыки
+    });
