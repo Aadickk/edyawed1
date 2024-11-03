@@ -425,3 +425,28 @@ footer {
       transform: rotate(360deg);
     }
   }
+
+  #end {
+    font-size: 1.5rem; /* Размер текста */
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    color: black;
+    border-radius: 12px;
+    width: 80%;
+    max-width: 800px;
+    font-family: 'Ana';
+}
+
+#end::after {
+    content: "";
+    display: block;
+    margin-top: 10px;
+    width: 60px;
+    height: 4px;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+}
