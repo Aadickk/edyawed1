@@ -5,6 +5,9 @@
     padding: auto;
     box-sizing: border-box;
 }
+body{
+    margin-right: auto;
+}
 
 
 @font-face {
@@ -113,6 +116,9 @@ h6 {
     color: #666;
     line-height: 1.0;
     font-family: Ana;
+}
+.about-us{
+    margin-top: 90px;
 }
 
 /* About Us Section Photos */
@@ -381,13 +387,41 @@ footer {
     justify-content: center;
     align-items: center;
   }
-
-#playButton {
-    margin-top: 40px;
-    font-size: 40px; /* Размер символа */
+  #playButton {
+    position: absolute;
+    margin-left:215px;
+    margin-top: 80px;
+    transform: translate(-50%, -50%);
+    width: 40px; /* размер кнопки */
+    height: 40px;
+    background: black; /* цвет кнопки */
+    color: white;
+    border: none;
+    border-radius: 80%;
     cursor: pointer;
-    background: none; /* Убираем фон */
-    border: none; /* Убираем рамку */
-    outline: none; /* Убираем обводку */
-    color: white; /* Цвет символа */
+    z-index: 10; /* чтобы кнопка была поверх текста */
 }
+.circle {
+    display: block;
+    overflow: visible;
+    margin: 40px 80px 90px 175px;
+    width: 80px;
+    font-size: 16px;
+    fill: black;
+    position: absolute;
+    animation: rotate 5s linear infinite; /* Анимация вращения */
+    display:flex
+    
+}
+  
+  .circle path {
+      fill: none;
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }

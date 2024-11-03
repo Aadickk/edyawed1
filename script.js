@@ -86,6 +86,14 @@ form.addEventListener('submit', e => {
   .then(() => { window.location.reload(); })
   .catch(error => console.error('Error!', error.message))
 })
+
+document.addEventListener('DOMContentLoaded', () => {
+    const audio = document.getElementById('audio');
+
+    audio.play().catch(error => {
+        console.error('Ошибка воспроизведения:', error);
+    });
+});
 const playButton = document.getElementById('playButton');
     const audio = document.getElementById('audio');
 
